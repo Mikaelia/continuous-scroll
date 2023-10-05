@@ -1,0 +1,38 @@
+.integration-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  max-width: 800px;
+  overflow-x: hidden;
+  padding: .5rem;
+}
+
+.integration-container:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, var(--color-white), transparent 20%, transparent 80%, var(--color-white));
+  z-index: 1;
+  pointer-events: none; 
+}
+
+.integration-container >  .pill-container {
+  animation: scroll linear infinite;
+}
+
+.integration-container > .pill-container:not(:last-child) {
+  margin-bottom: 1rem;
+}
+
+.integration-container > .pill-container:hover {
+  animation-play-state: paused;
+}
+
+@keyframes scroll {
+  to {
+    transform: translateX(calc(-50% - 0.5rem));
+  }
+}

@@ -1,0 +1,6 @@
+.pill-container {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 1rem;
+  width: max-content;
+}
